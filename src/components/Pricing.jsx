@@ -89,7 +89,7 @@ const Pricing = ({ onSelectPlan }) => {
                                     transition={{ delay: idx * 0.2 + 0.5, type: "spring" }}
                                     className="bg-primary text-white text-xs font-bold px-4 py-1 rounded-full w-max mx-auto mb-4 tracking-widest uppercase"
                                 >
-                                    Popüler
+                                    {t('pricing.popular')}
                                 </motion.div>
                             )}
                             <h3 className="text-2xl font-bold mb-2 text-center text-dark dark:text-white">{plan.title}</h3>

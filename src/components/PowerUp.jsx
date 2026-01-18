@@ -1,6 +1,12 @@
 import { useTranslation } from 'react-i18next';
 import { motion, useMotionValue } from 'framer-motion';
 
+import grammarImg from '../assets/powerup/grammar.png';
+import vocabularyImg from '../assets/powerup/vocabulary.png';
+import examImg from '../assets/powerup/exam.png';
+import readingImg from '../assets/powerup/reading.png';
+import listeningImg from '../assets/powerup/listening.png';
+
 const PowerUp = () => {
     const { t } = useTranslation();
     const originalCards = t('powerup.cards', { returnObjects: true });
@@ -50,11 +56,11 @@ const PowerUp = () => {
                     {infiniteCards.map((card, idx) => {
                         const originalIdx = idx % originalCards.length;
                         const categoryImages = [
-                            "https://loremflickr.com/800/500/books,library,study", // Grammatika
-                            "https://loremflickr.com/800/500/dictionary,notebook", // Lug'at
-                            "https://loremflickr.com/800/500/people,talking,coffee", // So'zlashuv
-                            "https://loremflickr.com/800/500/turkey,istanbul,culture", // Madaniyat
-                            "https://loremflickr.com/800/500/fun,party,happy"  // O'yin-kulgi
+                            grammarImg,    // 0: Grammar / Grammatika
+                            vocabularyImg, // 1: Vocabulary / Lug'at
+                            examImg,       // 2: Exam / Imtihon (Sınav Hazırlık)
+                            readingImg,    // 3: Reading / Okuma
+                            listeningImg   // 4: Listening / Dinleme
                         ];
 
                         return (
@@ -71,14 +77,6 @@ const PowerUp = () => {
                                         src={categoryImages[originalIdx]}
                                         alt={card.title}
                                         className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700 relative z-10"
-                                        onError={(e) => {
-                                            // Agar LoremFlickr ham ishlamasa, Unsplash-ga o'tish
-                                            if (!e.target.src.includes('unsplash')) {
-                                                e.target.src = `https://images.unsplash.com/photo-1543269865-cbf427ffebad?auto=format&fit=crop&q=60&w=800`;
-                                            } else {
-                                                e.target.style.opacity = '0';
-                                            }
-                                        }}
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-20 pointer-events-none"></div>
                                 </div>
@@ -91,7 +89,7 @@ const PowerUp = () => {
                     })}
                 </motion.div>
             </div>
-        </section>
+        </section >
     );
 };
 
