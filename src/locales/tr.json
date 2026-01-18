@@ -141,9 +141,9 @@
             "name": "Tam Adınız",
             "phone": "Telefon Numaranız",
             "reason_label": "Neden Türkçe öğrenmek istiyorsunuz?",
-            "reason_opt1": "Lisans veya Yüksek Lisans eğitimine girmek amacıyla",
-            "reason_opt2": "Aylık maaşa ek ödeme (zam) almak amacıyla",
-            "reason_opt3": "Seyahat veya eğitim için Türkiye'ye gitmek amacıyla",
+            "reason_opt1": "Lisans veya Yüksek Lisans eğitimi almak için mi?",
+            "reason_opt2": "Maaş artışı (terfi) almak için mi?",
+            "reason_opt3": "Türkiye'ye seyahat veya çalışma amacıyla gitmek için mi?",
             "submit": "Kayıt Ol",
             "success": "Başarıyla kayıt oldunuz! Yakında sizinle iletişime geçeceğiz."
         }

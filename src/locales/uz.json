@@ -143,9 +143,9 @@
             "name": "To'liq Ismingiz",
             "phone": "Telefon Raqamingiz",
             "reason_label": "Nima sababdan turk tilini o'rganmoqchisiz?",
-            "reason_opt1": "Bakalavr yoki Magistraturaga o'qishga kirish maqsadida",
-            "reason_opt2": "Oylik maoshga ustama olish maqsadida",
-            "reason_opt3": "Sayohat yoki o'qish uchun Turkiyaga borish maqsadida",
+            "reason_opt1": "Bakalavr yoki magistraturaga o'qishga kirish maqsadidami?",
+            "reason_opt2": "Oylikga ustama olish maqsadidami?",
+            "reason_opt3": "Sayohat yoki ishlash uchun Turkiyaga ketish maqsadidami?",
             "submit": "Ro'yxatdan o'tish",
             "success": "Muvaffaqiyatli ro'yxatdan o'tdingiz! Tez orada siz bilan bog'lanamiz."
         }

@@ -156,15 +156,7 @@ const Hero = () => {
                                 </Button>
                             </a>
                         </motion.div>
-                        <motion.div
-                            variants={buttonVariants}
-                            whileHover="hover"
-                            whileTap="tap"
-                        >
-                            <Button variant="outline" className="text-xl px-12 py-5 rounded-full border-2 border-white text-white hover:bg-white hover:text-dark transition-all font-bold backdrop-blur-md shadow-[0_0_20px_rgba(0,0,0,0.3)]">
-                                {t('hero.more_info')}
-                            </Button>
-                        </motion.div>
+
                     </motion.div>
                 </motion.div>
             </motion.div>
