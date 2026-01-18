@@ -38,7 +38,7 @@ const Register = () => {
         params.append('Name', formData.get('userName'));
         params.append('Phone', phone);
         params.append('Plan', formData.get('userPlan'));
-        params.append('Reason', formData.get('userReason'));
+        params.append('Message', formData.get('userReason'));
         params.append('Source', 'Registration Page');
 
         try {
