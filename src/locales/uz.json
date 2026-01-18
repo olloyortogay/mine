@@ -117,8 +117,11 @@
         "info_title": "Aloqa Ma'lumotlari",
         "info_desc": "Batafsil ma'lumot olish uchun bizga qo'ng'iroq qiling yoki telegramdan yozing.",
         "email_label": "Elektron pochta",
+        "email_val": "otogay1@gmail.com",
         "phone_label": "Telefon",
+        "phone_val": "+998 90 341 80 90",
         "address_label": "Manzil",
+        "location_val": "Toshkent, O'zbekiston",
         "address_value": "Toshkent shahri, Shayxontohur tumani",
         "form": {
             "name": "Ismingiz",

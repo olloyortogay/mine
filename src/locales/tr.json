@@ -115,8 +115,11 @@
         "info_title": "İletişim Bilgileri",
         "info_desc": "Daha fazla bilgi için bizi arayın veya Telegram üzerinden yazın.",
         "email_label": "E-posta",
+        "email_val": "otogay1@gmail.com",
         "phone_label": "Telefon",
+        "phone_val": "+998 90 341 80 90",
         "address_label": "Adres",
+        "location_val": "Taşkent, Özbekistan",
         "address_value": "Taşkent şehri, Şeyhantahur ilçesi",
         "form": {
             "name": "İsminiz",
