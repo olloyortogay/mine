@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { User, Phone, BookOpen, Send, CheckCircle2 } from 'lucide-react';
+import { User, Phone, BookOpen, Send, CheckCircle2, Layers } from 'lucide-react';
 import Button from '../components/Button';
 
 const Register = () => {
@@ -23,6 +23,12 @@ const Register = () => {
         setPhone(formatted);
     };
 
+    const plans = [
+        { title: t('pricing.p1_title'), price: t('pricing.p1_price') },
+        { title: t('pricing.p2_title'), price: t('pricing.p2_price') },
+        { title: t('pricing.p3_title'), price: t('pricing.p3_price') }
+    ];
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setFormState('loading');
@@ -31,6 +37,7 @@ const Register = () => {
         const params = new URLSearchParams();
         params.append('Name', formData.get('userName'));
         params.append('Phone', phone);
+        params.append('Plan', formData.get('userPlan'));
         params.append('Reason', formData.get('userReason'));
         params.append('Source', 'Registration Page');
 
@@ -128,6 +135,32 @@ const Register = () => {
                                     placeholder={t('contact.form.placeholder_phone')}
                                     className="w-full px-6 py-4 rounded-2xl bg-gray-50 dark:bg-gray-800 border-2 border-transparent focus:border-primary outline-none transition-all dark:text-white"
                                 />
+                            </div>
+
+                            {/* Plan Selection */}
+                            <div className="space-y-2">
+                                <label className="flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-primary dark:text-primary">
+                                    <Layers size={16} /> {t('register.plan_label')}
+                                </label>
+                                <div className="relative group">
+                                    <select
+                                        required
+                                        name="userPlan"
+                                        className="w-full px-6 py-4 rounded-2xl bg-gray-50 dark:bg-gray-800 border-2 border-transparent focus:border-primary outline-none transition-all dark:text-white appearance-none cursor-pointer"
+                                    >
+                                        <option value="" disabled selected>{t('register.plan_label')}</option>
+                                        {plans.map((plan, idx) => (
+                                            <option key={idx} value={`${plan.title} (${plan.price})`}>
+                                                {plan.title} - {plan.price}
+                                            </option>
+                                        ))}
+                                    </select>
+                                    <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400 group-focus-within:text-primary transition-colors">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="m6 9 6 6 6-6" />
+                                        </svg>
+                                    </div>
+                                </div>
                             </div>
 
                             {/* Reason */}

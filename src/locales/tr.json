@@ -141,6 +141,7 @@
         "subtitle": "Türkçe yolculuğunuza bugün bizimle başlayın!",
         "name": "Tam Adınız",
         "phone": "Telefon Numaranız",
+        "plan_label": "Kurs paketini seçin",
         "reason_label": "Neden Türkçe öğrenmek istiyorsunuz?",
         "reason_opt1": "Lisans veya Yüksek Lisans eğitimi almak için mi?",
         "reason_opt2": "Maaş artışı (terfi) almak için mi?",
