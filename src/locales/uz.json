@@ -136,18 +136,18 @@
             "success_msg": "Xabaringiz muvaffaqiyatli yuborildi.",
             "new_msg": "Yangi Xabar",
             "selected_plan": "Tanlangan Paket"
-        },
-        "register": {
-            "title": "Ro'yxatdan O'tish",
-            "subtitle": "Turk tili sayohatingizni bugun biz bilan boshlang!",
-            "name": "To'liq Ismingiz",
-            "phone": "Telefon Raqamingiz",
-            "reason_label": "Nima sababdan turk tilini o'rganmoqchisiz?",
-            "reason_opt1": "Bakalavr yoki magistraturaga o'qishga kirish maqsadidami?",
-            "reason_opt2": "Oylikga ustama olish maqsadidami?",
-            "reason_opt3": "Sayohat yoki ishlash uchun Turkiyaga ketish maqsadidami?",
-            "submit": "Ro'yxatdan o'tish",
-            "success": "Muvaffaqiyatli ro'yxatdan o'tdingiz! Tez orada siz bilan bog'lanamiz."
         }
+    },
+    "register": {
+        "title": "Ro'yxatdan O'tish",
+        "subtitle": "Turk tili sayohatingizni bugun biz bilan boshlang!",
+        "name": "To'liq Ismingiz",
+        "phone": "Telefon Raqamingiz",
+        "reason_label": "Nima sababdan turk tilini o'rganmoqchisiz?",
+        "reason_opt1": "Bakalavr yoki magistraturaga o'qishga kirish maqsadidami?",
+        "reason_opt2": "Oylikga ustama olish maqsadidami?",
+        "reason_opt3": "Sayohat yoki ishlash uchun Turkiyaga ketish maqsadidami?",
+        "submit": "Ro'yxatdan o'tish",
+        "success": "Muvaffaqiyatli ro'yxatdan o'tdingiz! Tez orada siz bilan bog'lanamiz."
     }
 }

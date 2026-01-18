@@ -134,18 +134,18 @@
             "success_msg": "Mesajınız başarıyla gönderildi.",
             "new_msg": "Yeni Mesaj",
             "selected_plan": "Seçilen Paket"
-        },
-        "register": {
-            "title": "Kayıt Ol",
-            "subtitle": "Türkçe yolculuğunuza bugün bizimle başlayın!",
-            "name": "Tam Adınız",
-            "phone": "Telefon Numaranız",
-            "reason_label": "Neden Türkçe öğrenmek istiyorsunuz?",
-            "reason_opt1": "Lisans veya Yüksek Lisans eğitimi almak için mi?",
-            "reason_opt2": "Maaş artışı (terfi) almak için mi?",
-            "reason_opt3": "Türkiye'ye seyahat veya çalışma amacıyla gitmek için mi?",
-            "submit": "Kayıt Ol",
-            "success": "Başarıyla kayıt oldunuz! Yakında sizinle iletişime geçeceğiz."
         }
+    },
+    "register": {
+        "title": "Kayıt Ol",
+        "subtitle": "Türkçe yolculuğunuza bugün bizimle başlayın!",
+        "name": "Tam Adınız",
+        "phone": "Telefon Numaranız",
+        "reason_label": "Neden Türkçe öğrenmek istiyorsunuz?",
+        "reason_opt1": "Lisans veya Yüksek Lisans eğitimi almak için mi?",
+        "reason_opt2": "Maaş artışı (terfi) almak için mi?",
+        "reason_opt3": "Türkiye'ye seyahat veya çalışma amacıyla gitmek için mi?",
+        "submit": "Kayıt Ol",
+        "success": "Başarıyla kayıt oldunuz! Yakında sizinle iletişime geçeceğiz."
     }
 }
