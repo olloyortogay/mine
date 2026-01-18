@@ -142,10 +142,11 @@
         "name": "Tam Adınız",
         "phone": "Telefon Numaranız",
         "plan_label": "Kurs paketini seçin",
+        "select_placeholder": "Seçiniz...",
         "reason_label": "Neden Türkçe öğrenmek istiyorsunuz?",
-        "reason_opt1": "Lisans veya Yüksek Lisans eğitimi almak için mi?",
-        "reason_opt2": "Maaş artışı (terfi) almak için mi?",
-        "reason_opt3": "Türkiye'ye seyahat veya çalışma amacıyla gitmek için mi?",
+        "reason_opt1": "Lisans veya Yüksek Lisans eğitimi almak için",
+        "reason_opt2": "Maaş artışı (terfi) almak için",
+        "reason_opt3": "Türkiye'ye seyahat veya çalışma amacıyla gitmek için",
         "submit": "Kayıt Ol",
         "success": "Başarıyla kayıt oldunuz! Yakında sizinle iletişime geçeceğiz."
     }

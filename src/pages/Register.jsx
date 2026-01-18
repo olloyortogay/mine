@@ -148,7 +148,7 @@ const Register = () => {
                                         name="userPlan"
                                         className="w-full px-6 py-4 rounded-2xl bg-gray-50 dark:bg-gray-800 border-2 border-transparent focus:border-primary outline-none transition-all dark:text-white appearance-none cursor-pointer"
                                     >
-                                        <option value="" disabled selected>{t('register.plan_label')}</option>
+                                        <option value="" disabled selected>{t('register.select_placeholder')}</option>
                                         {plans.map((plan, idx) => (
                                             <option key={idx} value={`${plan.title} (${plan.price})`}>
                                                 {plan.title} - {plan.price}
@@ -174,7 +174,7 @@ const Register = () => {
                                         name="userReason"
                                         className="w-full px-6 py-4 rounded-2xl bg-gray-50 dark:bg-gray-800 border-2 border-transparent focus:border-primary outline-none transition-all dark:text-white appearance-none cursor-pointer"
                                     >
-                                        <option value="" disabled selected>{t('register.reason_label')}</option>
+                                        <option value="" disabled selected>{t('register.select_placeholder')}</option>
                                         <option value={t('register.reason_opt1')}>{t('register.reason_opt1')}</option>
                                         <option value={t('register.reason_opt2')}>{t('register.reason_opt2')}</option>
                                         <option value={t('register.reason_opt3')}>{t('register.reason_opt3')}</option>

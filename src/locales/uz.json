@@ -144,10 +144,11 @@
         "name": "To'liq Ismingiz",
         "phone": "Telefon Raqamingiz",
         "plan_label": "Kurs paketini tanlang",
+        "select_placeholder": "Tanlang...",
         "reason_label": "Nima sababdan turk tilini o'rganmoqchisiz?",
-        "reason_opt1": "Bakalavr yoki magistraturaga o'qishga kirish maqsadidami?",
-        "reason_opt2": "Oylikga ustama olish maqsadidami?",
-        "reason_opt3": "Sayohat yoki ishlash uchun Turkiyaga ketish maqsadidami?",
+        "reason_opt1": "Bakalavr yoki magistraturaga o'qishga kirish",
+        "reason_opt2": "Oylikga ustama olish",
+        "reason_opt3": "Sayohat yoki ishlash uchun Turkiyaga ketish",
         "submit": "Ro'yxatdan o'tish",
         "success": "Muvaffaqiyatli ro'yxatdan o'tdingiz! Tez orada siz bilan bog'lanamiz."
     }
