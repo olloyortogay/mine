@@ -40,6 +40,7 @@ const Footer = () => {
 
                 <div className="border-t border-white/10 mt-12 pt-8 text-center text-sm">
                     © {currentYear} {t('common.brand')}. {t('footer.rights')}
+                    <span className="hidden md:inline ml-2">• Made with ❤️</span>
                 </div>
             </div>
         </footer>
