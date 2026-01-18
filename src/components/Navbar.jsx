@@ -4,10 +4,16 @@ import { Menu, X, Instagram, Send } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Button from './Button';
 
+import { useLocation } from 'react-router-dom';
+
 const Navbar = () => {
     const { t, i18n } = useTranslation();
+    const { pathname } = useLocation();
     const [scrolled, setScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+
+    // Force "scrolled" look (dark text, bg) if on non-home pages like /register
+    const isDarkHeader = scrolled || pathname !== '/';
 
     useEffect(() => {
         const handleScroll = () => {
@@ -36,7 +42,7 @@ const Navbar = () => {
 
     return (
         <header
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isDarkHeader
                 ? 'bg-white/60 dark:bg-black/60 backdrop-blur-2xl border-b border-white/20 dark:border-white/10 shadow-xl py-3'
                 : 'bg-transparent py-7'
                 }`}
@@ -49,14 +55,14 @@ const Navbar = () => {
                         e.preventDefault();
                         window.scrollTo({ top: 0, behavior: 'smooth' });
                     }}
-                    className={`text-2xl font-black tracking-tighter flex items-center gap-2 ${scrolled ? 'text-dark dark:text-white' : 'text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]'}`}
+                    className={`text-2xl font-black tracking-tighter flex items-center gap-2 ${isDarkHeader ? 'text-dark dark:text-white' : 'text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]'}`}
                 >
                     <img src="/logo.png" alt="Logo" className="w-10 h-10 object-contain" />
                     {t('common.brand')}
                 </a>
 
                 {/* Desktop Nav */}
-                <nav className={`hidden md:flex items-center gap-8 ${scrolled ? 'text-dark dark:text-white' : 'text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]'}`}>
+                <nav className={`hidden md:flex items-center gap-8 ${isDarkHeader ? 'text-dark dark:text-white' : 'text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]'}`}>
                     <button onClick={() => scrollToSection('hero')} className="font-medium hover:text-primary transition-colors">{t('navbar.nav1')}</button>
                     <button onClick={() => scrollToSection('features')} className="font-medium hover:text-primary transition-colors">{t('navbar.nav2')}</button>
                     <button onClick={() => scrollToSection('powerup')} className="font-medium hover:text-primary transition-colors">{t('navbar.nav5')}</button>
@@ -69,9 +75,10 @@ const Navbar = () => {
                     {/* 1. Instagram Link */}
                     <a
                         href="https://www.instagram.com/turkdunyasi2026/"
-                        target="_blank"
+
+
                         rel="noopener noreferrer"
-                        className={`w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all shadow-lg ${scrolled ? 'border-[#E1306C] text-[#E1306C] hover:bg-[#E1306C]/10' : 'border-white text-white hover:bg-white/20'}`}
+                        className={`w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all shadow-lg ${isDarkHeader ? 'border-[#E1306C] text-[#E1306C] hover:bg-[#E1306C]/10' : 'border-white text-white hover:bg-white/20'}`}
                         title="Instagram"
                     >
                         <Instagram size={20} />
@@ -80,9 +87,10 @@ const Navbar = () => {
                     {/* 2. Telegram Link */}
                     <a
                         href="https://t.me/turkdunyasi_on"
-                        target="_blank"
+
+
                         rel="noopener noreferrer"
-                        className={`w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all shadow-lg ${scrolled ? 'border-[#0088cc] text-[#0088cc] hover:bg-[#0088cc]/10' : 'border-white text-white hover:bg-white/20'}`}
+                        className={`w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all shadow-lg ${isDarkHeader ? 'border-[#0088cc] text-[#0088cc] hover:bg-[#0088cc]/10' : 'border-white text-white hover:bg-white/20'}`}
                         title="Telegram"
                     >
                         <Send size={20} />
@@ -91,7 +99,7 @@ const Navbar = () => {
                     {/* 3. Language Toggle */}
                     <button
                         onClick={() => i18n.changeLanguage(i18n.language === 'tr' ? 'uz' : 'tr')}
-                        className={`w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all shadow-lg overflow-hidden ${scrolled ? 'border-primary hover:bg-primary/10' : 'border-white hover:bg-white/20'}`}
+                        className={`w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all shadow-lg overflow-hidden ${isDarkHeader ? 'border-primary hover:bg-primary/10' : 'border-white hover:bg-white/20'}`}
                         title={i18n.language === 'tr' ? "Tilni o'zgartirish" : "Dil değiştir"}
                     >
                         {i18n.language === 'tr' ? (
@@ -103,7 +111,7 @@ const Navbar = () => {
 
                     {/* 4. Animated Theme Toggle */}
                     <AnimatePresence>
-                        {scrolled && (
+                        {isDarkHeader && (
                             <motion.button
                                 initial={{ opacity: 0, scale: 0, x: -10 }}
                                 animate={{ opacity: 1, scale: 1, x: 0 }}
