@@ -35,26 +35,30 @@
         "popular": "EN POPÜLER",
         "btn_select": "Seç",
         "p1_title": "Başlangıç",
-        "p1_price": "500.000",
+        "p1_price": "250.000",
         "p1_desc": "Temel seviye için ideal.",
-        "p1_f1": "Haftada 2 gün ders",
-        "p1_f2": "Temel gramer",
-        "p1_f3": "Konuşma pratikleri",
-        "p1_f4": "10 kişilik gruplar",
+        "p1_features": [
+            "Haftada 2 gün ders"
+        ],
         "p2_title": "Normal",
-        "p2_price": "800.000",
+        "p2_price": "400.000",
         "p2_desc": "En çok tercih edilen paket.",
-        "p2_f1": "Haftada 3 gün ders",
-        "p2_f2": "İleri düzey gramer",
-        "p2_f3": "Video ders paketi",
-        "p2_f4": "6 kişilik gruplar",
+        "p2_features": [
+            "Tam Gramer",
+            "Haftada 3 gün ders",
+            "Ders Dışı Konuşma",
+            "Online Materyaller"
+        ],
         "p3_title": "Özel",
-        "p3_price": "1.500.000",
+        "p3_price": "700.000",
         "p3_desc": "Hızlı ilerlemek isteyenler için.",
-        "p3_f1": "Haftada 5 gün ders",
-        "p3_f2": "Bireysel yaklaşım",
-        "p3_f3": "Sertifika imkanı",
-        "p3_f4": "3 kişilik gruplar"
+        "p3_features": [
+            "Bireysel Ders",
+            "Haftada 5 gün ders",
+            "Tam Gramer",
+            "VIP Destek",
+            "Online Materyaller"
+        ]
     },
     "powerup": {
         "title": "Bilginizi Artırın",

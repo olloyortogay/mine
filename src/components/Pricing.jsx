@@ -34,21 +34,21 @@ const Pricing = ({ onSelectPlan }) => {
             title: t('pricing.p1_title'),
             price: t('pricing.p1_price'),
             desc: t('pricing.p1_desc'),
-            features: ["Temel Gramer", "Haftada 2 ders", "Online Materyal"],
+            features: t('pricing.p1_features', { returnObjects: true }),
             popular: false
         },
         {
             title: t('pricing.p2_title'),
             price: t('pricing.p2_price'),
             desc: t('pricing.p2_desc'),
-            features: ["Orta Seviye Gramer", "Haftada 3 ders", "Konuşma Kulübü", "Sertifika"],
+            features: t('pricing.p2_features', { returnObjects: true }),
             popular: true
         },
         {
             title: t('pricing.p3_title'),
             price: t('pricing.p3_price'),
             desc: t('pricing.p3_desc'),
-            features: ["İleri Seviye", "Özel Ders", "Sınırsız Erişim", "VIP Destek"],
+            features: t('pricing.p3_features', { returnObjects: true }),
             popular: false
         }
     ];

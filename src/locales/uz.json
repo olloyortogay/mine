@@ -35,26 +35,30 @@
         "popular": "ENG MASHHUR",
         "btn_select": "Tanlash",
         "p1_title": "Boshlang'ich",
-        "p1_price": "500.000",
+        "p1_price": "250.000",
         "p1_desc": "Boshlang'ich daraja uchun ideal.",
-        "p1_f1": "Haftada 2 marta darslar",
-        "p1_f2": "Asosiy grammatika",
-        "p1_f3": "So'zlashuv mashqlari",
-        "p1_f4": "Guruhda 10 kishi",
+        "p1_features": [
+            "Haftada 2 kun dars"
+        ],
         "p2_title": "Normal",
-        "p2_price": "800.000",
+        "p2_price": "400.000",
         "p2_desc": "Eng ko'p tanlanadigan paket.",
-        "p2_f1": "Haftada 3 marta darslar",
-        "p2_f2": "Chuqurlashtirilgan grammatika",
-        "p2_f3": "Video darslar to'plami",
-        "p2_f4": "Guruhda 6 kishi",
+        "p2_features": [
+            "To'liq grammatika",
+            "Haftada 3 kun dars",
+            "Darsdan tashqari so'zlashuv",
+            "Onlayn Materiallar"
+        ],
         "p3_title": "Maxsus",
-        "p3_price": "1.500.000",
+        "p3_price": "700.000",
         "p3_desc": "Tez natijaga erishish uchun.",
-        "p3_f1": "Haftada 5 marta darslar",
-        "p3_f2": "Individual yondashuv",
-        "p3_f3": "Sertifikat beriladi",
-        "p3_f4": "Guruhda 3 kishi"
+        "p3_features": [
+            "Individual dars",
+            "Haftada 5 kun dars",
+            "To'liq grammatika",
+            "VIP Yordam",
+            "Onlayn Materiallar"
+        ]
     },
     "powerup": {
         "title": "Bilimingizni oshiring",

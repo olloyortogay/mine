@@ -11,7 +11,7 @@ i18n
             tr: { translation: tr },
             uz: { translation: uz }
         },
-        lng: "tr", // Default mainly Turkish as per request
+        lng: "uz", // Default to Uzbek as per request
         fallbackLng: "tr",
         interpolation: {
             escapeValue: false
