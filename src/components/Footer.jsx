@@ -15,7 +15,7 @@ const Footer = () => {
                             <img src="/logo.png" alt="Logo" className="w-10 h-10 object-contain" />
                             {t('common.brand')}
                         </div>
-                        <p>{t('footer.desc')}</p>
+
                     </div>
 
                     {/* Socials */}
@@ -39,8 +39,7 @@ const Footer = () => {
                 </div>
 
                 <div className="border-t border-white/10 mt-12 pt-8 text-center text-sm">
-                    © {currentYear} {t('common.brand')}. {t('footer.rights')}
-                    <span className="hidden md:inline ml-2">• Made with ❤️</span>
+                    © {currentYear} {t('common.brand')}.
                 </div>
             </div>
         </footer>
