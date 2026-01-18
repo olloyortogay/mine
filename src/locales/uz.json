@@ -1,0 +1,144 @@
+{
+    "common": {
+        "brand": "Turk Dunyosi"
+    },
+    "navbar": {
+        "nav1": "Bosh Sahifa",
+        "nav2": "Xususiyatlar",
+        "nav3": "Narxlar",
+        "nav4": "Aloqa",
+        "nav5": "Power-Up",
+        "cta": "Boshlash",
+        "language": "TILI",
+        "dark_mode": "TUNGI REJIM"
+    },
+    "hero": {
+        "title": "Turkcha Gapiring, Dunyo Sizniki!",
+        "subtitle": "So'zlar bilan raqsga tushishga tayyormisiz? Turk tilini o'rganish hech qachon bunchalik maroqli bo'lmagan!",
+        "cta": "Hozir Ro'yxatdan O'ting!",
+        "more_info": "Batafsil Ma'lumot",
+        "trustpilot": "5 yulduzli baholar"
+    },
+    "features": {
+        "title": "Nega Biz?",
+        "f1_title": "Qiziqarli",
+        "f1_desc": "Zerikarli darslarga chek qo'ying! Kulib, mazza qilib o'rganing.",
+        "f2_title": "Samarali",
+        "f2_desc": "Isbotlangan metodlar bilan tez natijaga erishing.",
+        "f3_title": "Sifatli",
+        "f3_desc": "Professional ustozlar va eng yaxshi materiallar."
+    },
+    "pricing": {
+        "title": "Sizga Mos Paketlar",
+        "subtitle": "O'zingizga qulay o'quv rejasini tanlang va bugun o'rganishni boshlang.",
+        "currency": "so'm",
+        "popular": "ENG MASHHUR",
+        "btn_select": "Tanlash",
+        "p1_title": "Boshlang'ich",
+        "p1_price": "500.000",
+        "p1_desc": "Boshlang'ich daraja uchun ideal.",
+        "p1_f1": "Haftada 2 marta darslar",
+        "p1_f2": "Asosiy grammatika",
+        "p1_f3": "So'zlashuv mashqlari",
+        "p1_f4": "Guruhda 10 kishi",
+        "p2_title": "Normal",
+        "p2_price": "800.000",
+        "p2_desc": "Eng ko'p tanlanadigan paket.",
+        "p2_f1": "Haftada 3 marta darslar",
+        "p2_f2": "Chuqurlashtirilgan grammatika",
+        "p2_f3": "Video darslar to'plami",
+        "p2_f4": "Guruhda 6 kishi",
+        "p3_title": "Maxsus",
+        "p3_price": "1.500.000",
+        "p3_desc": "Tez natijaga erishish uchun.",
+        "p3_f1": "Haftada 5 marta darslar",
+        "p3_f2": "Individual yondashuv",
+        "p3_f3": "Sertifikat beriladi",
+        "p3_f4": "Guruhda 3 kishi"
+    },
+    "powerup": {
+        "title": "Bilimingizni oshiring",
+        "subtitle": "Har kuni yangi so'zlar va iboralarni o'rganing",
+        "desc": "Til o'rganish jarayoningizni tezlashtiradigan maxsus texnika va materiallar.",
+        "cards": [
+            {
+                "title": "Grammatika",
+                "desc": "Qiyin qoidalarni oson tushuntirib beramiz"
+            },
+            {
+                "title": "Lug'at",
+                "desc": "Eng ko'p ishlatiladigan 1000 ta so'z"
+            },
+            {
+                "title": "Imtihon",
+                "desc": "TÖMER imtihoniga tayyorgarlik"
+            },
+            {
+                "title": "O'qish",
+                "desc": "Darajangizga mos o'qish matnlari"
+            },
+            {
+                "title": "Tinglash",
+                "desc": "Podkast va kino parchalari"
+            }
+        ]
+    },
+    "faq": {
+        "title": "Ko'p So'raladigan Savollar",
+        "subtitle": "Barcha savollaringizga javoblar shu yerda",
+        "questions": [
+            {
+                "q": "Darslar qachon boshlanadi?",
+                "a": "Guruhlar to'lishi bilan darslar boshlanadi. Odatda har oy yangi guruh ochiladi."
+            },
+            {
+                "q": "Onlayn darslar bormi?",
+                "a": "Ha, bizda ham oflayn, ham onlayn formatdagi darslar mavjud."
+            },
+            {
+                "q": "Sertifikat beriladimi?",
+                "a": "Kursni muvaffaqiyatli yakunlagan talabalarga kursni tamomlaganlik haqida sertifikat beriladi."
+            },
+            {
+                "q": "To'lovni bo'lib to'lasa bo'ladimi?",
+                "a": "Ha, uzoq muddatli kurslar uchun to'lovni bo'lib to'lash imkoniyati bor."
+            }
+        ]
+    },
+    "contact": {
+        "title": "Biz bilan bog'laning",
+        "subtitle": "Savollaringiz bormi? Ma'lumotlaringizni qoldiring, biz sizga qo'ng'iroq qilamiz.",
+        "info_title": "Aloqa Ma'lumotlari",
+        "info_desc": "Batafsil ma'lumot olish uchun bizga qo'ng'iroq qiling yoki telegramdan yozing.",
+        "email_label": "Elektron pochta",
+        "phone_label": "Telefon",
+        "address_label": "Manzil",
+        "address_value": "Toshkent shahri, Shayxontohur tumani",
+        "form": {
+            "name": "Ismingiz",
+            "phone": "Telefon raqamingiz",
+            "message": "Xabar (ixtiyoriy)",
+            "placeholder_name": "Ism",
+            "placeholder_phone": "+998 __-___-__-__",
+            "placeholder_msg": "Xabaringizni yozishingiz mumkin...",
+            "send": "Xabar Yuborish",
+            "sending": "Yuborilmoqda...",
+            "success_title": "Ajoyib!",
+            "success_msg": "Xabaringiz muvaffaqiyatli yuborildi.",
+            "new_msg": "Yangi Xabar",
+            "selected_plan": "Tanlangan Paket"
+        },
+        "register": {
+            "title": "Ro'yxatdan O'tish",
+            "subtitle": "Turk tili sayohatingizni bugun biz bilan boshlang!",
+            "name": "To'liq Ismingiz",
+            "phone": "Telefon Raqamingiz",
+            "reason_label": "Nima sababdan turk tilini o'rganmoqchisiz?",
+            "reason_opt1": "Bakalavr yoki Magistraturaga o'qishga kirish maqsadida",
+            "reason_opt2": "Oylik maoshga ustama olish maqsadida",
+            "reason_opt3": "Sayohat yoki o'qish uchun Turkiyaga borish maqsadida",
+            "submit": "Ro'yxatdan o'tish",
+            "success": "Muvaffaqiyatli ro'yxatdan o'tdingiz! Tez orada siz bilan bog'lanamiz."
+        }
+    }
+}
