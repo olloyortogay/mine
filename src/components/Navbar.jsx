@@ -14,6 +14,7 @@ const Navbar = () => {
 
     // Force "scrolled" look (dark text, bg) if on non-home pages like /register
     const isDarkHeader = scrolled || pathname !== '/';
+    const isRegisterPage = pathname === '/register';
 
     useEffect(() => {
         const handleScroll = () => {
@@ -62,39 +63,55 @@ const Navbar = () => {
                 </a>
 
                 {/* Desktop Nav */}
-                <nav className={`hidden md:flex items-center gap-8 ${isDarkHeader ? 'text-dark dark:text-white' : 'text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]'}`}>
-                    <button onClick={() => scrollToSection('hero')} className="font-medium hover:text-primary transition-colors">{t('navbar.nav1')}</button>
-                    <button onClick={() => scrollToSection('features')} className="font-medium hover:text-primary transition-colors">{t('navbar.nav2')}</button>
-                    <button onClick={() => scrollToSection('powerup')} className="font-medium hover:text-primary transition-colors">{t('navbar.nav5')}</button>
-                    <button onClick={() => scrollToSection('pricing')} className="font-medium hover:text-primary transition-colors">{t('navbar.nav3')}</button>
-                    <button onClick={() => scrollToSection('contact')} className="font-medium hover:text-primary transition-colors">{t('navbar.nav4')}</button>
-                </nav>
+                {/* Desktop Nav - Only show on Home page */}
+                {!isRegisterPage ? (
+                    <nav className={`hidden md:flex items-center gap-8 ${isDarkHeader ? 'text-dark dark:text-white' : 'text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]'}`}>
+                        <button onClick={() => scrollToSection('hero')} className="font-medium hover:text-primary transition-colors">{t('navbar.nav1')}</button>
+                        <button onClick={() => scrollToSection('features')} className="font-medium hover:text-primary transition-colors">{t('navbar.nav2')}</button>
+                        <button onClick={() => scrollToSection('powerup')} className="font-medium hover:text-primary transition-colors">{t('navbar.nav5')}</button>
+                        <button onClick={() => scrollToSection('pricing')} className="font-medium hover:text-primary transition-colors">{t('navbar.nav3')}</button>
+                        <button onClick={() => scrollToSection('contact')} className="font-medium hover:text-primary transition-colors">{t('navbar.nav4')}</button>
+                    </nav>
+                ) : (
+                    /* Creative/Fantasy Element for Register Page */
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="hidden md:block"
+                    >
+                        <span className="text-2xl font-black bg-gradient-to-r from-primary via-orange-500 to-red-600 bg-clip-text text-transparent animate-pulse filter drop-shadow-sm">
+                            ✨ {t('register.subtitle') ? t('register.subtitle').split('!')[0] : 'Kelajagingni Qur'}! ✨
+                        </span>
+                    </motion.div>
+                )}
 
                 {/* Actions */}
                 <div className="hidden md:flex items-center gap-4 relative">
-                    {/* 1. Instagram Link */}
-                    <a
-                        href="https://www.instagram.com/turkdunyasi2026/"
+                    {!isRegisterPage && (
+                        <>
+                            {/* 1. Instagram Link */}
+                            <a
+                                href="https://www.instagram.com/turkdunyasi2026/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all shadow-lg ${isDarkHeader ? 'border-[#E1306C] text-[#E1306C] hover:bg-[#E1306C]/10' : 'border-white text-white hover:bg-white/20'}`}
+                                title="Instagram"
+                            >
+                                <Instagram size={20} />
+                            </a>
 
-
-                        rel="noopener noreferrer"
-                        className={`w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all shadow-lg ${isDarkHeader ? 'border-[#E1306C] text-[#E1306C] hover:bg-[#E1306C]/10' : 'border-white text-white hover:bg-white/20'}`}
-                        title="Instagram"
-                    >
-                        <Instagram size={20} />
-                    </a>
-
-                    {/* 2. Telegram Link */}
-                    <a
-                        href="https://t.me/turkdunyasi_on"
-
-
-                        rel="noopener noreferrer"
-                        className={`w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all shadow-lg ${isDarkHeader ? 'border-[#0088cc] text-[#0088cc] hover:bg-[#0088cc]/10' : 'border-white text-white hover:bg-white/20'}`}
-                        title="Telegram"
-                    >
-                        <Send size={20} />
-                    </a>
+                            {/* 2. Telegram Link */}
+                            <a
+                                href="https://t.me/turkdunyasi_on"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all shadow-lg ${isDarkHeader ? 'border-[#0088cc] text-[#0088cc] hover:bg-[#0088cc]/10' : 'border-white text-white hover:bg-white/20'}`}
+                                title="Telegram"
+                            >
+                                <Send size={20} />
+                            </a>
+                        </>
+                    )}
 
                     {/* 3. Language Toggle */}
                     <button
@@ -152,11 +169,23 @@ const Navbar = () => {
                             exit={{ opacity: 0, y: -20 }}
                             className="absolute top-full left-0 right-0 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 p-5 md:hidden flex flex-col gap-4 shadow-lg"
                         >
-                            <button onClick={() => scrollToSection('hero')} className="block py-2 font-medium text-left dark:text-gray-200">{t('navbar.nav1')}</button>
-                            <button onClick={() => scrollToSection('features')} className="block py-2 font-medium text-left dark:text-gray-200">{t('navbar.nav2')}</button>
-                            <button onClick={() => scrollToSection('powerup')} className="block py-2 font-medium text-left dark:text-gray-200">{t('navbar.nav5')}</button>
-                            <button onClick={() => scrollToSection('pricing')} className="block py-2 font-medium text-left dark:text-gray-200">{t('navbar.nav3')}</button>
-                            <button onClick={() => scrollToSection('contact')} className="block py-2 font-medium text-left dark:text-gray-200">{t('navbar.nav4')}</button>
+                            {!isRegisterPage && (
+                                <>
+                                    <button onClick={() => scrollToSection('hero')} className="block py-2 font-medium text-left dark:text-gray-200">{t('navbar.nav1')}</button>
+                                    <button onClick={() => scrollToSection('features')} className="block py-2 font-medium text-left dark:text-gray-200">{t('navbar.nav2')}</button>
+                                    <button onClick={() => scrollToSection('powerup')} className="block py-2 font-medium text-left dark:text-gray-200">{t('navbar.nav5')}</button>
+                                    <button onClick={() => scrollToSection('pricing')} className="block py-2 font-medium text-left dark:text-gray-200">{t('navbar.nav3')}</button>
+                                    <button onClick={() => scrollToSection('contact')} className="block py-2 font-medium text-left dark:text-gray-200">{t('navbar.nav4')}</button>
+                                </>
+                            )}
+
+                            {isRegisterPage && (
+                                <div className="py-2 text-center">
+                                    <span className="text-xl font-black bg-gradient-to-r from-primary via-orange-500 to-red-600 bg-clip-text text-transparent animate-pulse">
+                                        ✨ {t('register.subtitle') ? t('register.subtitle').split('!')[0] : 'Kelajagingni Qur'}! ✨
+                                    </span>
+                                </div>
+                            )}
 
                             <div className="flex items-center justify-between py-2 border-t border-gray-100 dark:border-gray-800 mt-2">
                                 <span className="text-sm text-gray-500">{t('navbar.dark_mode')}</span>
@@ -172,24 +201,26 @@ const Navbar = () => {
                                 </button>
                             </div>
 
-                            <div className="flex items-center gap-4 py-4 border-b border-gray-100 dark:border-gray-800">
-                                <a
-                                    href="https://www.instagram.com/turkdunyasi2026/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-[#E1306C]/10 text-[#E1306C] font-bold"
-                                >
-                                    <Instagram size={20} /> Instagram
-                                </a>
-                                <a
-                                    href="https://t.me/turkdunyasi_on"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-[#0088cc]/10 text-[#0088cc] font-bold"
-                                >
-                                    <Send size={20} /> Telegram
-                                </a>
-                            </div>
+                            {!isRegisterPage && (
+                                <div className="flex items-center gap-4 py-4 border-b border-gray-100 dark:border-gray-800">
+                                    <a
+                                        href="https://www.instagram.com/turkdunyasi2026/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-[#E1306C]/10 text-[#E1306C] font-bold"
+                                    >
+                                        <Instagram size={20} /> Instagram
+                                    </a>
+                                    <a
+                                        href="https://t.me/turkdunyasi_on"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-[#0088cc]/10 text-[#0088cc] font-bold"
+                                    >
+                                        <Send size={20} /> Telegram
+                                    </a>
+                                </div>
+                            )}
 
                             <div className="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-800 mb-2">
                                 <span className="text-sm text-gray-500">{t('navbar.language')}</span>
