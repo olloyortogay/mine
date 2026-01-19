@@ -117,7 +117,7 @@ const Register = () => {
                                     required
                                     name="userName"
                                     type="text"
-                                    placeholder={t('contact.form.placeholder_name')}
+                                    placeholder="Umar"
                                     className="w-full px-6 py-4 rounded-2xl bg-gray-50 dark:bg-gray-800 border-2 border-transparent focus:border-primary outline-none transition-all dark:text-white"
                                 />
                             </div>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Menu, X, Instagram, Send } from 'lucide-react';
+import { Menu, Instagram, Send } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Button from './Button';
 
@@ -157,7 +157,7 @@ const Navbar = () => {
                     onClick={() => setIsOpen(!isOpen)}
                     className={`md:hidden p-2 rounded-lg transition-colors ${scrolled ? 'text-dark dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800' : 'text-white hover:bg-white/10'}`}
                 >
-                    {isOpen ? <X size={28} /> : <Menu size={28} />}
+                    {isOpen ? <Menu size={28} /> : <Menu size={28} />}
                 </button>
 
                 {/* Mobile Menu */}

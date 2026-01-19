@@ -103,7 +103,7 @@ const ContactForm = ({ selectedPlan }) => {
                                     <Phone className="w-6 h-6" />
                                 </div>
                                 <div>
-                                    <p className="text-sm text-gray-400 uppercase tracking-widest font-bold mb-1">{t('contact.phone')}</p>
+                                    <p className="text-sm text-gray-400 uppercase tracking-widest font-bold mb-1">Telefon</p>
                                     <p className="text-xl font-medium">{t('contact.phone_val')}</p>
                                 </div>
                             </div>
@@ -113,7 +113,7 @@ const ContactForm = ({ selectedPlan }) => {
                                     <Mail className="w-6 h-6" />
                                 </div>
                                 <div>
-                                    <p className="text-sm text-gray-400 uppercase tracking-widest font-bold mb-1">{t('contact.email')}</p>
+                                    <p className="text-sm text-gray-400 uppercase tracking-widest font-bold mb-1">Email</p>
                                     <p className="text-xl font-medium">{t('contact.email_val')}</p>
                                 </div>
                             </div>
@@ -123,7 +123,7 @@ const ContactForm = ({ selectedPlan }) => {
                                     <MapPin className="w-6 h-6" />
                                 </div>
                                 <div>
-                                    <p className="text-sm text-gray-400 uppercase tracking-widest font-bold mb-1">{t('contact.location')}</p>
+                                    <p className="text-sm text-gray-400 uppercase tracking-widest font-bold mb-1">Joylashuv</p>
                                     <p className="text-xl font-medium">{t('contact.location_val')}</p>
                                 </div>
                             </div>
@@ -172,7 +172,7 @@ const ContactForm = ({ selectedPlan }) => {
                                         type="text"
                                         name="userName"
                                         required
-                                        placeholder={t('contact.form.placeholder_name')}
+                                        placeholder="Umar"
                                         className="w-full px-4 py-4 rounded-xl bg-white/5 border border-white/10 focus:border-primary outline-none text-white placeholder-gray-500 transition-colors"
                                         whileFocus={{ scale: 1.02, borderColor: "#E30A17" }}
                                     />
