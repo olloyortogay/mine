@@ -26,7 +26,9 @@
         "f2_title": "Samarali",
         "f2_desc": "Isbotlangan metodlar bilan tez natijaga erishing.",
         "f3_title": "Sifatli",
-        "f3_desc": "Professional ustozlar va eng yaxshi materiallar."
+        "f3_desc": "Professional ustozlar va eng yaxshi materiallar.",
+        "f4_title": "Oson",
+        "f4_desc": "Istalgan joydan va istalgan vaqtda o'rganish imkoniyati."
     },
     "pricing": {
         "title": "Sizga Mos Paketlar",
@@ -98,12 +100,24 @@
                 "a": "Guruhlar to'lishi bilan darslar boshlanadi. Odatda har oy yangi guruh ochiladi."
             },
             {
-                "q": "Onlayn darslar bormi?",
-                "a": "Ha, bizda ham oflayn, ham onlayn formatdagi darslar mavjud."
+                "q": "Masofaviy ta'lim uchun nimalar kerak?",
+                "a": "Sizga faqat barqaror internet, quloqchin va darslarga qatnashish uchun xohish kerak."
             },
             {
-                "q": "Sertifikat beriladimi?",
-                "a": "Kursni muvaffaqiyatli yakunlagan talabalarga kursni tamomlaganlik haqida sertifikat beriladi."
+                "q": "Darslar qanday platformada o'tiladi?",
+                "a": "Darslarimiz eng zamonaviy va qulay onlayn video-konferensiya platformalarida (Zoom/Google Meet) o'tiladi."
+            },
+            {
+                "q": "Darslarni o'tkazib yuborsam nima bo'ladi?",
+                "a": "Har bir dars yozib olinadi va siz istalgan vaqtda uni qayta ko'rishingiz mumkin."
+            },
+            {
+                "q": "Darslar yozib olinadimi?",
+                "a": "Ha, barcha jonli darslar yozib olinadi va shaxsiy kabinetingizga joylanadi."
+            },
+            {
+                "q": "Uy vazifalari tekshiriladimi?",
+                "a": "Ha, ustozlar har bir uy vazifasini individual tekshirib, xatolar ustida ishlaydilar."
             },
             {
                 "q": "To'lovni bo'lib to'lasa bo'ladimi?",

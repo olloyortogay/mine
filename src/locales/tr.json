@@ -26,7 +26,9 @@
         "f2_title": "Etkili",
         "f2_desc": "Kanıtlanmış metodlarla hızlı sonuç alın.",
         "f3_title": "Kaliteli",
-        "f3_desc": "Profesyonel öğretmenler ve en iyi materyaller."
+        "f3_desc": "Profesyonel öğretmenler ve en iyi materyaller.",
+        "f4_title": "Kolay",
+        "f4_desc": "Her yerden ve her zaman öğrenme imkanı."
     },
     "pricing": {
         "title": "Size Uygun Paketler",
@@ -96,12 +98,24 @@
                 "a": "Gruplar dolduğunda dersler başlar. Genellikle her ay yeni bir grup açılmaktadır."
             },
             {
-                "q": "Online dersleriniz var mı?",
-                "a": "Evet, hem yüz yüze hem de online formatta derslerimiz mevcuttur."
+                "q": "Uzaktan eğitim için neler gerekli?",
+                "a": "Sadece istikrarlı bir internet bağlantısı, kulaklık ve öğrenme isteği yeterlidir."
             },
             {
-                "q": "Sertifika veriyor musunuz?",
-                "a": "Kursu başarıyla tamamlayan öğrencilere katılım sertifikası verilmektedir."
+                "q": "Dersler hangi platformda yapılıyor?",
+                "a": "Derslerimiz en modern ve kullanışlı çevrimiçi video konferans platformları (Zoom/Google Meet) üzerinden yapılır."
+            },
+            {
+                "q": "Dersi kaçırırsam ne olur?",
+                "a": "Her ders kaydedilir ve dilediğiniz zaman tekrar izleyebilirsiniz."
+            },
+            {
+                "q": "Dersler kayıt ediliyor mu?",
+                "a": "Evet, tüm canlı dersler kaydedilir ve kişisel panelinize yüklenir."
+            },
+            {
+                "q": "Ödevler kontrol ediliyor mu?",
+                "a": "Evet, öğretmenler her ödevi bireysel olarak kontrol eder ve geri bildirim verir."
             },
             {
                 "q": "Ödeme taksit imkanı var mı?",
