@@ -149,7 +149,7 @@
     "register": {
         "title": "Kayıt Ol",
         "subtitle": "Türkçe yolculuğunuza bugün bizimle başlayın!",
-        "name": "Tam Adınız",
+        "name": "İsminiz",
         "phone": "Telefon Numaranız",
         "plan_label": "Kurs paketini seçin",
         "select_placeholder": "Seçiniz...",
