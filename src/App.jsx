@@ -12,6 +12,7 @@ import PowerUp from './components/PowerUp';
 import FAQ from './components/FAQ';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
+import FloatingRegisterButton from './components/FloatingRegisterButton';
 import Register from './pages/Register';
 
 // Scroll to top on route change (for Register page)
@@ -81,6 +82,7 @@ function AppContent() {
         } />
       </Routes>
 
+      <FloatingRegisterButton />
       <Footer />
     </div>
   );
