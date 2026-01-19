@@ -103,15 +103,11 @@
             },
             {
                 "q": "Dersler hangi platformda yapılıyor?",
-                "a": "Derslerimiz en modern ve kullanışlı çevrimiçi video konferans platformları (Zoom/Google Meet) üzerinden yapılır."
+                "a": "Derslerimiz sizin için en uygun ve rahat olan çevrimiçi video konferans platformları (Telegram/Zoom/Google Meet) üzerinden yapılır."
             },
             {
                 "q": "Dersi kaçırırsam ne olur?",
                 "a": "Her ders kaydedilir ve dilediğiniz zaman tekrar izleyebilirsiniz."
-            },
-            {
-                "q": "Dersler kayıt ediliyor mu?",
-                "a": "Evet, tüm canlı dersler kaydedilir ve kişisel panelinize yüklenir."
             },
             {
                 "q": "Ödevler kontrol ediliyor mu?",

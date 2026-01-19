@@ -105,15 +105,11 @@
             },
             {
                 "q": "Darslar qanday platformada o'tiladi?",
-                "a": "Darslarimiz eng zamonaviy va qulay onlayn video-konferensiya platformalarida (Zoom/Google Meet) o'tiladi."
+                "a": "Darslarimiz siz uchun eng uyg'un va qulay bo'lgan onlayn video-konferensiya platformalarida (Telegram/Zoom/Google Meet) o'tiladi."
             },
             {
                 "q": "Darslarni o'tkazib yuborsam nima bo'ladi?",
                 "a": "Har bir dars yozib olinadi va siz istalgan vaqtda uni qayta ko'rishingiz mumkin."
-            },
-            {
-                "q": "Darslar yozib olinadimi?",
-                "a": "Ha, barcha jonli darslar yozib olinadi va shaxsiy kabinetingizga joylanadi."
             },
             {
                 "q": "Uy vazifalari tekshiriladimi?",
