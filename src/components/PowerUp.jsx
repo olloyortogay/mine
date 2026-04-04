@@ -1,11 +1,11 @@
 import { useTranslation } from 'react-i18next';
 import { motion, useMotionValue } from 'framer-motion';
 
-import grammarImg from '../assets/powerup/grammar.png';
-import vocabularyImg from '../assets/powerup/vocabulary.png';
-import examImg from '../assets/powerup/exam.png';
-import readingImg from '../assets/powerup/reading.png';
-import listeningImg from '../assets/powerup/listening.png';
+import grammarImg from '../assets/powerup/grammar.webp';
+import vocabularyImg from '../assets/powerup/vocabulary.webp';
+import examImg from '../assets/powerup/exam.webp';
+import readingImg from '../assets/powerup/reading.webp';
+import listeningImg from '../assets/powerup/listening.webp';
 
 const PowerUp = () => {
     const { t } = useTranslation();
