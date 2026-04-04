@@ -1,19 +1,27 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, lazy, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Lenis from 'lenis';
 
+// Critical above-the-fold components — load eagerly
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Features from './components/Features';
-import Pricing from './components/Pricing';
-import PowerUp from './components/PowerUp';
-import FAQ from './components/FAQ';
-import ContactForm from './components/ContactForm';
-import Footer from './components/Footer';
-import FloatingRegisterButton from './components/FloatingRegisterButton';
-import Register from './pages/Register';
+
+// Below-the-fold components — lazy loaded (reduces initial JS bundle)
+const Features = lazy(() => import('./components/Features'));
+const Pricing = lazy(() => import('./components/Pricing'));
+const PowerUp = lazy(() => import('./components/PowerUp'));
+const FAQ = lazy(() => import('./components/FAQ'));
+const ContactForm = lazy(() => import('./components/ContactForm'));
+const Footer = lazy(() => import('./components/Footer'));
+const FloatingRegisterButton = lazy(() => import('./components/FloatingRegisterButton'));
+const Register = lazy(() => import('./pages/Register'));
+
+// Lightweight loading fallback — prevents layout shift
+const PageLoader = () => (
+  <div style={{ minHeight: '200px' }} aria-hidden="true" />
+);
 
 // Scroll to top on route change (for Register page)
 function ScrollToTop() {
@@ -61,29 +69,39 @@ function AppContent() {
         <html lang={i18n.language} />
       </Helmet>
 
+      {/* Navbar always visible — no lazy */}
       <Navbar />
       <ScrollToTop />
 
       <Routes>
         <Route path="/" element={
           <main>
+            {/* Hero is critical — no suspense wrapper needed */}
             <Hero />
-            <Features />
-            <Pricing onSelectPlan={setSelectedPlan} />
-            <PowerUp />
-            <FAQ />
-            <ContactForm selectedPlan={selectedPlan} />
+
+            {/* Below-the-fold sections — lazy loaded */}
+            <Suspense fallback={<PageLoader />}>
+              <Features />
+              <Pricing onSelectPlan={setSelectedPlan} />
+              <PowerUp />
+              <FAQ />
+              <ContactForm selectedPlan={selectedPlan} />
+            </Suspense>
           </main>
         } />
         <Route path="/register" element={
           <main>
-            <Register />
+            <Suspense fallback={<PageLoader />}>
+              <Register />
+            </Suspense>
           </main>
         } />
       </Routes>
 
-      <FloatingRegisterButton />
-      <Footer />
+      <Suspense fallback={null}>
+        <FloatingRegisterButton />
+        <Footer />
+      </Suspense>
     </div>
   );
 }

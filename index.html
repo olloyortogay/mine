@@ -3,8 +3,29 @@
 
 <head>
   <meta charset="UTF-8" />
+  <!-- Favicon: WebP first, PNG fallback -->
+  <link rel="icon" type="image/webp" href="/favicon.webp" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts: preconnect + non-blocking load (render-blocking fix) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;900&family=Merriweather:wght@300;400;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;900&family=Merriweather:wght@300;400;700&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;900&family=Merriweather:wght@300;400;700&display=swap" /></noscript>
+
+  <!-- Dark mode: apply before paint to avoid FOUC -->
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      } catch(e) {}
+    })();
+  </script>
 
   <!-- SEO Meta Tags -->
   <title>Turk Dunyosiga xush kelibsiz! | Online Türkçe Kursu - Türkçe Öğrenme</title>

@@ -12,7 +12,7 @@ const Footer = () => {
                     {/* Logo & Desc */}
                     <div className="text-center md:text-left">
                         <div className="text-2xl font-black tracking-tighter text-white flex items-center justify-center md:justify-start gap-2 mb-4">
-                            <img src="/logo.png" alt="Logo" className="w-10 h-10 object-contain" />
+                            <img src="/logo.webp" alt="Logo" width="40" height="40" className="w-10 h-10 object-contain" />
                             {t('common.brand')}
                         </div>
 

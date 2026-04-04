@@ -58,7 +58,7 @@ const Navbar = () => {
                     }}
                     className={`text-2xl font-black tracking-tighter flex items-center gap-2 ${isDarkHeader ? 'text-dark dark:text-white' : 'text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]'}`}
                 >
-                    <img src="/logo.png" alt="Logo" className="w-10 h-10 object-contain" />
+                    <img src="/logo.webp" alt="Logo" width="40" height="40" className="w-10 h-10 object-contain" />
                     {t('common.brand')}
                 </a>
 
@@ -120,9 +120,9 @@ const Navbar = () => {
                         title={i18n.language === 'tr' ? "Tilni o'zgartirish" : "Dil değiştir"}
                     >
                         {i18n.language === 'tr' ? (
-                            <img src="https://flagcdn.com/w80/tr.png" alt="TR" className="w-full h-full object-cover" />
+                            <span className="text-2xl leading-none" role="img" aria-label="TR">🇹🇷</span>
                         ) : (
-                            <img src="https://flagcdn.com/w80/uz.png" alt="UZ" className="w-full h-full object-cover" />
+                            <span className="text-2xl leading-none" role="img" aria-label="UZ">🇺🇿</span>
                         )}
                     </button>
 

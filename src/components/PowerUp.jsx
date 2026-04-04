@@ -11,9 +11,9 @@ const PowerUp = () => {
     const { t } = useTranslation();
     const originalCards = t('powerup.cards', { returnObjects: true });
 
-    // Create a massive list of cards to simulate infinity
-    // Multiplying/Looping the array ensures users can drag for a very long time
-    const REPEAT_COUNT = 20;
+    // Create enough cards to simulate infinity without excessive DOM elements
+    // 5 cards × 6 = 30 elements (was 100 with REPEAT_COUNT=20)
+    const REPEAT_COUNT = 6;
     const infiniteCards = Array(REPEAT_COUNT).fill(originalCards).flat();
 
     // Set explicit card width + gap tailored to the design

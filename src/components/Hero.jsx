@@ -5,15 +5,21 @@ import Button from './Button';
 
 const slides = [
     {
-        image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&q=80&w=1920", // Istanbul Galata Tower
+        // Istanbul Galata Tower — WebP + responsive sizing
+        imageSm: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&q=70&w=800&fm=webp",
+        imageMd: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&q=70&w=1440&fm=webp",
         accentColor: "#E30A17"
     },
     {
-        image: "https://images.unsplash.com/photo-1542833278-f4deb3180291?auto=format&fit=crop&q=80&w=1920", // Hot air balloons (User provided link)
+        // Hot air balloons
+        imageSm: "https://images.unsplash.com/photo-1542833278-f4deb3180291?auto=format&fit=crop&q=70&w=800&fm=webp",
+        imageMd: "https://images.unsplash.com/photo-1542833278-f4deb3180291?auto=format&fit=crop&q=70&w=1440&fm=webp",
         accentColor: "#F2C511"
     },
     {
-        image: "https://images.unsplash.com/photo-1623439844752-524658b16ce6?auto=format&fit=crop&q=80&w=1920", // City by water (User provided link)
+        // City by water
+        imageSm: "https://images.unsplash.com/photo-1623439844752-524658b16ce6?auto=format&fit=crop&q=70&w=800&fm=webp",
+        imageMd: "https://images.unsplash.com/photo-1623439844752-524658b16ce6?auto=format&fit=crop&q=70&w=1440&fm=webp",
         accentColor: "#FFFFFF"
     }
 ];
@@ -85,11 +91,15 @@ const Hero = () => {
                     exit={{ opacity: 0, scale: 1.05 }}
                     transition={{ duration: 2, ease: "easeInOut" }}
                 >
-                    <div className="absolute inset-0 bg-black/40 z-10"></div> {/* Dark Overlay */}
+                    <div className="absolute inset-0 bg-black/40 z-10"></div>
                     <img
-                        src={slides[currentSlide].image}
-                        alt="Istanbul Landmark"
-                        loading="eager"
+                        src={slides[currentSlide].imageMd}
+                        srcSet={`${slides[currentSlide].imageSm} 800w, ${slides[currentSlide].imageMd} 1440w`}
+                        sizes="100vw"
+                        alt="Türkiye Manzarası"
+                        fetchPriority={currentSlide === 0 ? "high" : "low"}
+                        loading={currentSlide === 0 ? "eager" : "lazy"}
+                        decoding="async"
                         className="w-full h-full object-cover relative z-10"
                         onError={(e) => {
                             e.target.style.display = 'none';
@@ -98,9 +108,15 @@ const Hero = () => {
                 </motion.div>
             </AnimatePresence>
 
-            {/* Glowing Blobs for extra "motion" feel */}
-            <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] mix-blend-screen animate-pulse"></div>
-            <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[100px] mix-blend-screen animate-pulse delay-700"></div>
+            {/* Glowing Blobs — GPU optimized with will-change */}
+            <div
+                className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-primary/20 rounded-full blur-[100px] mix-blend-screen animate-pulse"
+                style={{ willChange: 'opacity' }}
+            ></div>
+            <div
+                className="absolute bottom-1/4 right-1/4 w-[300px] h-[300px] bg-accent/10 rounded-full blur-[80px] mix-blend-screen animate-pulse delay-700"
+                style={{ willChange: 'opacity' }}
+            ></div>
 
             <motion.div
                 className="container relative z-10 text-center px-4"
@@ -131,7 +147,6 @@ const Hero = () => {
                             display: 'inline-block',
                             padding: '10px 20px',
                             borderRadius: '15px',
-                            backdropBlur: 'sm'
                         }}
                     >
                         {t('hero.subtitle')}
