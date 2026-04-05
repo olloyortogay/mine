@@ -4,7 +4,7 @@ import { Menu, Instagram, Send } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Button from './Button';
 
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
     const { t, i18n } = useTranslation();
@@ -12,9 +12,9 @@ const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
-    // Force "scrolled" look (dark text, bg) if on non-home pages like /register
-    const isDarkHeader = scrolled || pathname !== '/';
-    const isRegisterPage = pathname === '/register';
+    // Force "scrolled" look (dark text, bg) if on non-home pages
+    const isHomePage = pathname === '/';
+    const isDarkHeader = scrolled || !isHomePage;
 
     useEffect(() => {
         const handleScroll = () => {
@@ -63,31 +63,46 @@ const Navbar = () => {
                 </a>
 
                 {/* Desktop Nav */}
-                {/* Desktop Nav - Only show on Home page */}
-                {!isRegisterPage ? (
+                {/* Desktop Nav - Only show scroll links on Home page */}
+                {isHomePage ? (
                     <nav className={`hidden md:flex items-center gap-8 ${isDarkHeader ? 'text-dark dark:text-white' : 'text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]'}`}>
                         <button onClick={() => scrollToSection('hero')} className="font-medium hover:text-primary transition-colors">{t('navbar.nav1')}</button>
                         <button onClick={() => scrollToSection('features')} className="font-medium hover:text-primary transition-colors">{t('navbar.nav2')}</button>
                         <button onClick={() => scrollToSection('powerup')} className="font-medium hover:text-primary transition-colors">{t('navbar.nav5')}</button>
                         <button onClick={() => scrollToSection('pricing')} className="font-medium hover:text-primary transition-colors">{t('navbar.nav3')}</button>
                         <button onClick={() => scrollToSection('contact')} className="font-medium hover:text-primary transition-colors">{t('navbar.nav4')}</button>
+                        
+                        {/* New Routes */}
+                        <div className="w-[1px] h-5 bg-gray-300 dark:bg-gray-700 mx-2 hidden lg:block"></div>
+                        <Link to="/blog" onClick={() => setIsOpen(false)} className="font-medium hover:text-primary transition-colors flex items-center gap-1">{t('navbar.nav6')}</Link>
+                        <Link to="/quiz" onClick={() => setIsOpen(false)} className="font-medium hover:text-primary transition-colors flex items-center gap-1">
+                            <span className="relative flex h-2 w-2 mr-1">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                            </span>
+                            {t('navbar.nav7')}
+                        </Link>
                     </nav>
                 ) : (
-                    /* Creative/Fantasy Element for Register Page */
-                    <motion.div
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="hidden md:block"
-                    >
-                        <span className="text-2xl font-black bg-gradient-to-r from-primary via-orange-500 to-red-600 bg-clip-text text-transparent animate-pulse filter drop-shadow-sm">
-                            ✨ {t('register.subtitle') ? t('register.subtitle').split('!')[0] : 'Kelajagingni Qur'}! ✨
-                        </span>
-                    </motion.div>
+                    <nav className="hidden md:flex items-center gap-8 text-dark dark:text-white">
+                        <Link to="/" className="font-medium hover:text-primary transition-colors flex items-center gap-1">
+                            &larr; {t('navbar.nav1')}
+                        </Link>
+                        <div className="w-[1px] h-5 bg-gray-300 dark:bg-gray-700 mx-2 hidden lg:block"></div>
+                        <Link to="/blog" onClick={() => setIsOpen(false)} className={`font-medium hover:text-primary transition-colors flex items-center gap-1 ${pathname === '/blog' ? 'text-primary' : ''}`}>{t('navbar.nav6')}</Link>
+                        <Link to="/quiz" onClick={() => setIsOpen(false)} className={`font-medium hover:text-primary transition-colors flex items-center gap-1 ${pathname === '/quiz' ? 'text-primary' : ''}`}>
+                            <span className="relative flex h-2 w-2 mr-1">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                            </span>
+                            {t('navbar.nav7')}
+                        </Link>
+                    </nav>
                 )}
 
                 {/* Actions */}
                 <div className="hidden md:flex items-center gap-4 relative">
-                    {!isRegisterPage && (
+                    {isHomePage && (
                         <>
                             {/* 1. Instagram Link */}
                             <a
@@ -171,22 +186,33 @@ const Navbar = () => {
                             exit={{ opacity: 0, y: -20 }}
                             className="absolute top-full left-0 right-0 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 p-5 md:hidden flex flex-col gap-4 shadow-lg"
                         >
-                            {!isRegisterPage && (
+                            {isHomePage ? (
                                 <>
                                     <button onClick={() => scrollToSection('hero')} className="block py-2 font-medium text-left dark:text-gray-200">{t('navbar.nav1')}</button>
                                     <button onClick={() => scrollToSection('features')} className="block py-2 font-medium text-left dark:text-gray-200">{t('navbar.nav2')}</button>
                                     <button onClick={() => scrollToSection('powerup')} className="block py-2 font-medium text-left dark:text-gray-200">{t('navbar.nav5')}</button>
                                     <button onClick={() => scrollToSection('pricing')} className="block py-2 font-medium text-left dark:text-gray-200">{t('navbar.nav3')}</button>
                                     <button onClick={() => scrollToSection('contact')} className="block py-2 font-medium text-left dark:text-gray-200">{t('navbar.nav4')}</button>
+                                    
+                                    <div className="h-[1px] w-full bg-gray-100 dark:bg-gray-800 my-1"></div>
+                                    <Link to="/blog" onClick={() => setIsOpen(false)} className="block py-2 font-medium text-left text-primary pl-2 border-l-2 border-primary">{t('navbar.nav6')}</Link>
+                                    <Link to="/quiz" onClick={() => setIsOpen(false)} className="py-2 font-medium text-left text-primary pl-2 border-l-2 border-primary flex items-center gap-2">
+                                        {t('navbar.nav7')}
+                                        <span className="relative flex h-2 w-2">
+                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                            <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                                        </span>
+                                    </Link>
                                 </>
-                            )}
-
-                            {isRegisterPage && (
-                                <div className="py-2 text-center">
-                                    <span className="text-xl font-black bg-gradient-to-r from-primary via-orange-500 to-red-600 bg-clip-text text-transparent animate-pulse">
-                                        ✨ {t('register.subtitle') ? t('register.subtitle').split('!')[0] : 'Kelajagingni Qur'}! ✨
-                                    </span>
-                                </div>
+                            ) : (
+                                <>
+                                    <Link to="/" onClick={() => setIsOpen(false)} className="block py-2 font-medium text-left dark:text-gray-200">&larr; {t('navbar.nav1')}</Link>
+                                    <div className="h-[1px] w-full bg-gray-100 dark:bg-gray-800 my-1"></div>
+                                    <Link to="/blog" onClick={() => setIsOpen(false)} className="block py-2 font-medium text-left text-primary pl-2 border-l-2 border-primary">{t('navbar.nav6')}</Link>
+                                    <Link to="/quiz" onClick={() => setIsOpen(false)} className="py-2 font-medium text-left text-primary pl-2 border-l-2 border-primary flex items-center gap-2">
+                                        {t('navbar.nav7')}
+                                    </Link>
+                                </>
                             )}
 
                             <div className="flex items-center justify-between py-2 border-t border-gray-100 dark:border-gray-800 mt-2">
@@ -203,8 +229,8 @@ const Navbar = () => {
                                 </button>
                             </div>
 
-                            {!isRegisterPage && (
-                                <div className="flex items-center gap-4 py-4 border-b border-gray-100 dark:border-gray-800">
+                            {isHomePage && (
+                                <div className="flex items-center gap-4 py-4 border-y border-gray-100 dark:border-gray-800 my-2">
                                     <a
                                         href="https://www.instagram.com/turkdunyasi2026/"
                                         target="_blank"

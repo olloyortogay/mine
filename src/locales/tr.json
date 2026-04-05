@@ -8,9 +8,26 @@
         "nav3": "Fiyatlar",
         "nav4": "İletişim",
         "nav5": "Power-Up",
+        "nav6": "Blog",
+        "nav7": "Seviye Testi",
         "cta": "Başla",
         "language": "DİL",
         "dark_mode": "GECE MODU"
+    },
+    "blog": {
+        "title": "Son Yazılar",
+        "subtitle": "Türkçe öğrenme ipuçları ve faydalı makaleler",
+        "read_more": "Devamını Oku"
+    },
+    "quiz": {
+        "title": "Seviyenizi Öğrenin",
+        "subtitle": "Kısa testimizi çözün ve hangi seviyede olduğunuzu anında görün",
+        "start": "Teste Başla",
+        "next": "Sıradaki Soru",
+        "finish": "Testi Bitir",
+        "your_score": "Puanınız:",
+        "recommendation": "Size uygun olan eğitim paketlerini incelemek ister misiniz?",
+        "check_prices": "Fiyatları İncele"
     },
     "hero": {
         "title": "Türkçe Konuş, Dünya Kazansın!",

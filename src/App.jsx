@@ -17,6 +17,8 @@ const ContactForm = lazy(() => import('./components/ContactForm'));
 const Footer = lazy(() => import('./components/Footer'));
 const FloatingRegisterButton = lazy(() => import('./components/FloatingRegisterButton'));
 const Register = lazy(() => import('./pages/Register'));
+const Blog = lazy(() => import('./pages/Blog'));
+const Quiz = lazy(() => import('./pages/Quiz'));
 
 // Lightweight loading fallback — prevents layout shift
 const PageLoader = () => (
@@ -93,6 +95,20 @@ function AppContent() {
           <main>
             <Suspense fallback={<PageLoader />}>
               <Register />
+            </Suspense>
+          </main>
+        } />
+        <Route path="/blog" element={
+          <main>
+            <Suspense fallback={<PageLoader />}>
+              <Blog />
+            </Suspense>
+          </main>
+        } />
+        <Route path="/quiz" element={
+          <main>
+            <Suspense fallback={<PageLoader />}>
+              <Quiz />
             </Suspense>
           </main>
         } />

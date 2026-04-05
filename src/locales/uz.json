@@ -8,9 +8,26 @@
         "nav3": "Narxlar",
         "nav4": "Aloqa",
         "nav5": "Power-Up",
+        "nav6": "Blog",
+        "nav7": "Darajani Aniqlash",
         "cta": "Boshlash",
         "language": "TILI",
         "dark_mode": "TUNGI REJIM"
+    },
+    "blog": {
+        "title": "So'nggi Maqolalar",
+        "subtitle": "Turk tilini o'rganish bo'yicha maslahatlar va foydali maqolalar",
+        "read_more": "Davomini o'qish"
+    },
+    "quiz": {
+        "title": "Darajangizni Bilib Oling",
+        "subtitle": "Qisqa testimizni yeching va qaysi darajada ekanligingizni darhol bilib oling",
+        "start": "Testni Boshlash",
+        "next": "Keyingi Savol",
+        "finish": "Testni Tugatish",
+        "your_score": "Sizning ballingiz:",
+        "recommendation": "Sizga mos o'quv paketlarini ko'rib chiqishni xohlaysizmi?",
+        "check_prices": "Narxlarni ko'rish"
     },
     "hero": {
         "title": "Turkcha Gapiring, Dunyo Sizniki!",
