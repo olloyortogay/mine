@@ -102,6 +102,22 @@ const Navbar = () => {
 
                 {/* Actions */}
                 <div className="hidden md:flex items-center gap-4 relative">
+                    {/* TYS Sınavı Button */}
+                    <a
+                        href="https://sinav.turkdunyasi.uz"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`px-5 py-2 rounded-xl text-sm font-bold flex items-center gap-2 border-2 transition-all shadow-lg overflow-hidden relative group ${isDarkHeader ? 'border-primary text-primary hover:bg-primary/10' : 'border-white text-white hover:bg-white/20'}`}
+                        title="TYS Semavi Testi / Deneme Sınavı"
+                    >
+                        <div className={`absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent ${isDarkHeader ? 'via-primary/20' : 'via-white/40'} to-transparent`}></div>
+                        <span className="relative flex h-2 w-2">
+                            <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${isDarkHeader ? 'bg-primary' : 'bg-white'}`}></span>
+                            <span className={`relative inline-flex rounded-full h-2 w-2 ${isDarkHeader ? 'bg-primary' : 'bg-white'}`}></span>
+                        </span>
+                        TYS Online Sınavı
+                    </a>
+
                     {isHomePage && (
                         <>
                             {/* 1. Instagram Link */}
@@ -186,6 +202,21 @@ const Navbar = () => {
                             exit={{ opacity: 0, y: -20 }}
                             className="absolute top-full left-0 right-0 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 p-5 md:hidden flex flex-col gap-4 shadow-lg"
                         >
+                            {/* TYS Sınavı Button (Mobile) */}
+                            <a
+                                href="https://sinav.turkdunyasi.uz"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-full py-3 rounded-xl bg-primary text-white font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary/30 relative overflow-hidden group"
+                            >
+                                <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+                                <span className="relative flex h-3 w-3">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+                                </span>
+                                TYS Online Sınavı
+                            </a>
+
                             {isHomePage ? (
                                 <>
                                     <button onClick={() => scrollToSection('hero')} className="block py-2 font-medium text-left dark:text-gray-200">{t('navbar.nav1')}</button>

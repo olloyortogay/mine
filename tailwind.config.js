@@ -7,6 +7,14 @@ export default {
     darkMode: 'class',
     theme: {
         extend: {
+            keyframes: {
+                shimmer: {
+                    '100%': { transform: 'translateX(100%)' },
+                }
+            },
+            animation: {
+                shimmer: 'shimmer 1.5s infinite',
+            },
             colors: {
                 primary: '#E30A17', // Turkish Flag Red
                 secondary: '#8a040b', // Darker Red

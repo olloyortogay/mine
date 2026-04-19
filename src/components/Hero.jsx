@@ -172,6 +172,26 @@ const Hero = () => {
                             </a>
                         </motion.div>
 
+                        <motion.div
+                            variants={buttonVariants}
+                            whileHover="hover"
+                            whileTap="tap"
+                        >
+                            <a href="https://sinav.turkdunyasi.uz" target="_blank" rel="noopener noreferrer">
+                                <Button
+                                    variant="outline"
+                                    className="text-xl px-12 py-5 rounded-full shadow-[0_0_20px_rgba(255,255,255,0.3)] bg-white/10 text-white backdrop-blur-md border border-white/40 hover:bg-white hover:text-dark font-bold hover:shadow-[0_0_30px_rgba(255,255,255,0.8)] transition-all duration-300 flex items-center justify-center gap-3 overflow-hidden group relative"
+                                >
+                                    <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+                                    <span className="relative flex h-3 w-3">
+                                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                      <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                                    </span>
+                                    TYS Online Sınavı
+                                </Button>
+                            </a>
+                        </motion.div>
+
                     </motion.div>
                 </motion.div>
             </motion.div>
