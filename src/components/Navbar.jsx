@@ -102,20 +102,20 @@ const Navbar = () => {
 
                 {/* Actions */}
                 <div className="hidden md:flex items-center gap-4 relative">
-                    {/* TYS Sınavı Button */}
+                    {/* Konuşma Sınavı Button */}
                     <a
                         href="https://sinav.turkdunyasi.uz"
                         target="_blank"
                         rel="noopener noreferrer"
                         className={`px-5 py-2 rounded-xl text-sm font-bold flex items-center gap-2 border-2 transition-all shadow-lg overflow-hidden relative group ${isDarkHeader ? 'border-primary text-primary hover:bg-primary/10' : 'border-white text-white hover:bg-white/20'}`}
-                        title="TYS Semavi Testi / Deneme Sınavı"
+                        title={i18n.language === 'tr' ? 'Konuşma Sınavı' : 'Gapirish imtihoni'}
                     >
                         <div className={`absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent ${isDarkHeader ? 'via-primary/20' : 'via-white/40'} to-transparent`}></div>
                         <span className="relative flex h-2 w-2">
                             <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${isDarkHeader ? 'bg-primary' : 'bg-white'}`}></span>
                             <span className={`relative inline-flex rounded-full h-2 w-2 ${isDarkHeader ? 'bg-primary' : 'bg-white'}`}></span>
                         </span>
-                        TYS Online Sınavı
+                        {i18n.language === 'tr' ? 'Konuşma Sınavı' : 'Gapirish imtihoni'}
                     </a>
 
                     {isHomePage && (
@@ -214,7 +214,7 @@ const Navbar = () => {
                                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
                                     <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
                                 </span>
-                                TYS Online Sınavı
+                                {i18n.language === 'tr' ? 'Konuşma Sınavı' : 'Gapirish imtihoni'}
                             </a>
 
                             {isHomePage ? (

@@ -25,7 +25,7 @@ const slides = [
 ];
 
 const Hero = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const { scrollY } = useScroll();
     const y = useTransform(scrollY, [0, 300], [0, 100]);
     const opacity = useTransform(scrollY, [0, 200], [1, 0]);
@@ -187,7 +187,7 @@ const Hero = () => {
                                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                                       <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
                                     </span>
-                                    TYS Online Sınavı
+                                    {i18n.language === 'tr' ? 'Konuşma Sınavı' : 'Gapirish imtihoni'}
                                 </Button>
                             </a>
                         </motion.div>
