@@ -1,4 +1,4 @@
-{
+﻿{
     "common": {
         "brand": "Turk Dunyosi"
     },
@@ -71,7 +71,7 @@
             "Onlayn Materiallar"
         ],
         "p3_title": "Maxsus",
-        "p3_price": "700.000",
+        "p3_price": "1.000.000",
         "p3_desc": "Tez natijaga erishish uchun.",
         "p3_features": [
             "Individual dars",

@@ -1,4 +1,4 @@
-{
+﻿{
     "common": {
         "brand": "Türk Dünyası"
     },
@@ -69,7 +69,7 @@
             "Online Materyaller"
         ],
         "p3_title": "Özel",
-        "p3_price": "700.000",
+        "p3_price": "1.000.000",
         "p3_desc": "Hızlı ilerlemek isteyenler için.",
         "p3_features": [
             "Bireysel Ders",
