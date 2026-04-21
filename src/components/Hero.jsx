@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import Button from './Button';
@@ -187,7 +187,7 @@ const Hero = () => {
                                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                                       <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
                                     </span>
-                                    {i18n.language === 'tr' ? 'Konuşma Sınavı' : 'Gapirish imtihoni'}
+                                    {i18n.language === 'tr' ? 'Konuşma Sınavı' : 'Imtihon markazi'}
                                 </Button>
                             </a>
                         </motion.div>
