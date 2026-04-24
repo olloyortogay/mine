@@ -4,11 +4,26 @@ import { Helmet } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Lenis from 'lenis';
 
-// Critical above-the-fold components — load eagerly
+// 1. Sentry Importu
+import * as Sentry from "@sentry/react";
+
+// 2. Sentry Başlatma (Mühür Vuruldu!)
+Sentry.init({
+  dsn: "https://e0f9b32fb69582961bfc226256fbf6ce@o4511270006947840.ingest.de.sentry.io/4511274873454672",
+  integrations: [
+    Sentry.browserTracingIntegration(),
+    Sentry.replayIntegration(),
+  ],
+  tracesSampleRate: 1.0,
+  replaysSessionSampleRate: 0.1,
+  replaysOnErrorSampleRate: 1.0,
+});
+
+// Critical above-the-fold components
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 
-// Below-the-fold components — lazy loaded (reduces initial JS bundle)
+// Below-the-fold components
 const Features = lazy(() => import('./components/Features'));
 const Pricing = lazy(() => import('./components/Pricing'));
 const PowerUp = lazy(() => import('./components/PowerUp'));
@@ -20,12 +35,10 @@ const Register = lazy(() => import('./pages/Register'));
 const Blog = lazy(() => import('./pages/Blog'));
 const Quiz = lazy(() => import('./pages/Quiz'));
 
-// Lightweight loading fallback — prevents layout shift
 const PageLoader = () => (
   <div style={{ minHeight: '200px' }} aria-hidden="true" />
 );
 
-// Scroll to top on route change (for Register page)
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -39,7 +52,6 @@ function AppContent() {
   const [selectedPlan, setSelectedPlan] = useState(null);
 
   useEffect(() => {
-    // Initialize Lenis for smooth scrolling
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -55,12 +67,8 @@ function AppContent() {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
-
     requestAnimationFrame(raf);
-
-    return () => {
-      lenis.destroy();
-    };
+    return () => { lenis.destroy(); };
   }, []);
 
   return (
@@ -71,17 +79,13 @@ function AppContent() {
         <html lang={i18n.language} />
       </Helmet>
 
-      {/* Navbar always visible — no lazy */}
       <Navbar />
       <ScrollToTop />
 
       <Routes>
         <Route path="/" element={
           <main>
-            {/* Hero is critical — no suspense wrapper needed */}
             <Hero />
-
-            {/* Below-the-fold sections — lazy loaded */}
             <Suspense fallback={<PageLoader />}>
               <Features />
               <Pricing onSelectPlan={setSelectedPlan} />
@@ -91,27 +95,9 @@ function AppContent() {
             </Suspense>
           </main>
         } />
-        <Route path="/register" element={
-          <main>
-            <Suspense fallback={<PageLoader />}>
-              <Register />
-            </Suspense>
-          </main>
-        } />
-        <Route path="/blog" element={
-          <main>
-            <Suspense fallback={<PageLoader />}>
-              <Blog />
-            </Suspense>
-          </main>
-        } />
-        <Route path="/quiz" element={
-          <main>
-            <Suspense fallback={<PageLoader />}>
-              <Quiz />
-            </Suspense>
-          </main>
-        } />
+        <Route path="/register" element={<main><Suspense fallback={<PageLoader />}><Register /></Suspense></main>} />
+        <Route path="/blog" element={<main><Suspense fallback={<PageLoader />}><Blog /></Suspense></main>} />
+        <Route path="/quiz" element={<main><Suspense fallback={<PageLoader />}><Quiz /></Suspense></main>} />
       </Routes>
 
       <Suspense fallback={null}>
@@ -122,10 +108,13 @@ function AppContent() {
   );
 }
 
+// 4. Sentry Error Boundary
+const SentryApp = Sentry.withProfiler(AppContent);
+
 function App() {
   return (
     <Router>
-      <AppContent />
+      <SentryApp />
     </Router>
   );
 }
